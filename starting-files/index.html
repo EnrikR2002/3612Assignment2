@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <link href="index.css" rel="stylesheet">
+</head>
+<html>
+<body>
+    <div id="header">
+        <h1>Header</h1>
+        <button id="playlist">Playlist</button>
+        <button id="credit">Credits</button>
+
+    </div>
+    <div id="song_search">
+        <h2>Song Search</h2>
+        <div id="filters">
+            <input type="radio" value="title" id="title_filter">Title
+            <input type="text">
+            <br>
+            <input type="radio"  value="artist" id="artist_filter">Artist
+            <select id="artist">
+                <!-- add options for each artist in js-->
+                <option value="none">Pick one</option>
+                <option value="ye">Kanye West</option>
+                <option value="drake">Drake</option>
+                <option value="savage">21 Savage</option>
+                <option value="baby">Lil Baby</option>  
+            </select>
+            <br>
+            <input type="radio" value="genre" id="genre_filter">Genre
+            <select id="genre">
+                <option value="none">Pick one</option>
+                <option value="hip-hop">hip-hop</option>
+                <option value="r&b">R&B</option>
+            </select>
+        </div>
+        <div id="search">
+            <h2>Search Results</h2>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                    <th>Popularity</th>
+                </tr>
+                <!--add songs that match filter criteria in js-->
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+          <p>Footer</p>  
+    </div>
+
+    <div id="song_details">
+        <div id="song_info">
+            <p>For loop song info such as, title, artist, narture, etc.</p>
+            <br>
+            <p>Analysis data:</p>
+            <ul>
+                <!--list song data in js-->
+            </ul>
+        </div>
+        <div id="footer">
+        <div id="radar_chart">
+            <p>Radar chart</p>
+        </div>
+    </div>
+    <div id="playlist_details">
+        <p>Playlist Details</p>
+        <p id="playlist_stats"># songs, Popularity ranking</p>
+        <button id="clear">Clear Playlist</button>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Genre</th>
+            <th>Popularity</th>
+        </tr>
+        <button id="remove">Remove</button>
+    </div>
+</body>
+</html>
