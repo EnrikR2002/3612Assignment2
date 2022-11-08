@@ -16,6 +16,8 @@
             <input type="radio" value="title" id="title_filter">Title
             <input type="text">
             <br>
+            <br>
+            <br>
             <input type="radio"  value="artist" id="artist_filter">Artist
             <select id="artist">
                 <!-- add options for each artist in js-->
@@ -26,22 +28,28 @@
                 <option value="baby">Lil Baby</option>  
             </select>
             <br>
+            <br>
+            <br>
             <input type="radio" value="genre" id="genre_filter">Genre
             <select id="genre">
                 <option value="none">Pick one</option>
                 <option value="hip-hop">hip-hop</option>
                 <option value="r&b">R&B</option>
             </select>
+            <br>
+            <br>
+            <button id="clear_filter">Clear</button>
+            <button id="apply_filter">Filter</button>
         </div>
         <div id="search">
             <h2>Search Results</h2>
             <table>
                 <tr>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Year</th>
-                    <th>Genre</th>
-                    <th>Popularity</th>
+                    <th id="table_title">Title</th>
+                    <th id="table_artist">Artist</th>
+                    <th id="table_year">Year</th>
+                    <th id="table_genre">Genre</th>
+                    <th id="table_popular">Popularity</th>
                 </tr>
                 <!--add songs that match filter criteria in js-->
             </table>
@@ -51,33 +59,44 @@
           <p>Footer</p>  
     </div>
 
+    
+    
+    
     <div id="song_details">
         <div id="song_info">
+            <h1>Song Information</h1>
             <p>For loop song info such as, title, artist, narture, etc.</p>
             <br>
             <p>Analysis data:</p>
             <ul>
+                <li>bpm</li>
+                <li>energy</li>
+                <li>liveness</li>
                 <!--list song data in js-->
             </ul>
         </div>
         <div id="radar_chart">
-            <p>Radar chart</p>
+            <h1>Radar Chart</h1>
         </div>
     </div>
+
+
+
+
     <div id="playlist_details">
-        <p>Playlist Details</p>
+        <h1 id="header">Playlist Details</h1>
         <p id="playlist_stats"># songs, Popularity ranking</p>
-        <button id="clear">Clear Playlist</button>
-        <tr>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Year</th>
-            <th>Genre</th>
-            <th>Popularity</th>
-        </tr>
-        <button id="remove">Remove</button>
+        <button id="clear_playlist">Clear Playlist</button>
+        <table>
+            <tr>
+                <th id="table_title">Title</th>
+                <th id="table_artist">Artist</th>
+                <th id="table_year">Year</th>
+                <th id="table_genre">Genre</th>
+                <th id="table_popular">Popularity</th>
+            </tr>
+        </table>
+        <button id="remove_playlist">Remove</button>
     </div>
 </body>
 </html>
-
-<!-- testing a thing-->
