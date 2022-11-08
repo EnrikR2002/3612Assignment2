@@ -4,28 +4,57 @@
     text-align: center;
     border: 1px solid black;
 }
+
+/* 
+    Song search CSS
+*/
 #song_search{
     width: 400px;
     height: 900px;
     border: 1px solid purple;
-    display: none;
 }
 
 #playlist{
     position: absolute;
     margin-left: 650px;
     top: 30px;
+    padding: 10px;
 }
 #credit{
     position: absolute;
     margin-left: 720px;
     top: 30px;
+    padding: 10px;
 }
 
 #filters{
     position: absolute;
     border: 1px solid red;
 }
+
+#artist{
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+}
+
+#genre{
+    width: 150px;
+    padding: 10px;
+    text-align: left;
+}
+
+#search table{
+    position: absolute;
+    border: 1px solid purple;
+    bottom: 750px;
+}
+
+button#apply_filter, button#clear_filter{
+    width: 100px;
+    padding: 5px;
+}
+
 #search{
     width: 1445px;
     height: 900px;
@@ -45,6 +74,13 @@
     text-align: center;
 }
 
+
+
+
+/*  
+    Song details CSS
+*/
+
 #song_details{
     display: none;
 }
@@ -62,19 +98,70 @@
     border: 1px solid blue;
     left: 450px;
     top: 80px;
+    text-align: center;
 
 }
 
-/*
-#playlist_details{
 
-}
+
+/* 
+    Playlist view CSS
 
 */
+
+
+
+
+#playlist_details{
+    /*border: 1px solid red;*/
+    display: none;
+}
+
 
 #playlist_stats{
     border: 1px solid black;
     text-align: center;
     top: 50px;
     
+}
+
+#playlist_details table{
+    position: absolute;
+    border: 1px solid purple;
+    bottom: 600px;
+
+}
+
+#playlist_details h1{
+    /*border: 1px solid green; */
+    text-align: left;
+}
+
+#table_artist{
+    padding-left: 240px;
+}
+#table_year{
+    padding-left: 100px;
+}
+#table_genre{
+    padding-left: 80px;
+}
+#table_popular{
+    padding-left: 70px;
+}
+button#clear_playlist{
+    position: absolute;
+    border: 1px solid green;
+    right: 100px;
+    padding: 10px;
+}
+
+button#remove_playlist{
+    position: absolute;
+    right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 550px;
 }
