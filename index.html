@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link href="index.css" rel="stylesheet">
+    <script src="assign2.js" type="text/JavaScript"></script>
 </head>
 <html>
 <body>
@@ -43,14 +44,19 @@
         </div>
         <div id="search">
             <h2>Search Results</h2>
-            <table>
-                <tr>
-                    <th id="table_title">Title</th>
-                    <th id="table_artist">Artist</th>
-                    <th id="table_year">Year</th>
-                    <th id="table_genre">Genre</th>
-                    <th id="table_popular">Popularity</th>
-                </tr>
+            <table id="search_table">
+                <thead>
+                    <tr>
+                        <th id="table_title">Title</th>
+                        <th id="table_artist">Artist</th>
+                        <th id="table_year">Year</th>
+                        <th id="table_genre">Genre</th>
+                        <th id="table_popular">Popularity</th>
+                    </tr>
+                </thead>
+                <tbody id="search_table_body">
+
+                </tbody>
                 <!--add songs that match filter criteria in js-->
             </table>
         </div>
