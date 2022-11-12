@@ -44,11 +44,35 @@
     text-align: left;
 }
 
-#search table{
-    position: absolute;
+
+#search_table{
+    position: relative;
     border: 1px solid purple;
-    bottom: 750px;
+    bottom: 50px;
+    width: 100%;
 }
+
+#search_table thead th{
+    position: sticky;
+    top: 0;
+}
+
+#search_table tbody{
+    height: 750px;
+    border: 1px solid blue;
+    overflow-y: scroll;
+    float: left;
+    /* 
+    With float left we get a scrollable table but the width is too short, removing this property takes away the ability to scroll
+    not sure how to get more width and keep it scrollable, I tried just increasing the width but it didn't work
+    */
+}
+
+/*
+#search_table tr {
+    display: block;
+}
+*/
 
 button#apply_filter, button#clear_filter{
     width: 100px;
@@ -57,7 +81,7 @@ button#apply_filter, button#clear_filter{
 
 #search{
     width: 1445px;
-    height: 900px;
+    height: 700px;
     border: 1px solid blue;
     position: absolute;
     left: 450px;
