@@ -32,6 +32,7 @@ function mainApplication(songData){
    const popupDiv = document.querySelector("#creditPopup")
    const credit = document.querySelector("#creditButton")
 
+   /*
    // mouseover the credits thing
    credit.addEventListener('mouseover', function(){
        popupDiv.classList.remove("hide")
@@ -41,6 +42,7 @@ function mainApplication(songData){
    credit.addEventListener('mouseout', function(){
        popupDiv.classList.add("hide")
    })
+   */
 
    //create an array of genres
    let genreArray =[]
@@ -81,32 +83,32 @@ function mainApplication(songData){
    //populate the inital view under browse/search
 
    //first get each list
-   const titleListNode = document.querySelector("#titleResultList")
-   const artistListNode = document.querySelector("#artistResultList")
-   const yearListNode = document.querySelector("#yearResultList")
-   const genreListNode = document.querySelector("#genreResultList")
-   const popularityListNode = document.querySelector("#popularityResultList")
-
+   const tBody = document.querySelector("#search_table tbody");
    //append items to the list
    for (let i =0; i< songData.length; i++){
-       let titleItem = document.createElement("li")
-       let artistItem = document.createElement("li")
-       let yearItem = document.createElement("li")
-       let genreItem = document.createElement("li")
-       let popularityItem = document.createElement("li")
+    let row = document.createElement("tr")
+    row.setAttribute("data-song", songData[i].song_id);
 
-       titleItem.textContent = songData[i].title;
-       artistItem.textContent = songData[i].artist.name
-       yearItem.textContent = songData[i].year;
-       genreItem.textContent = songData[i].genre.name;
-       popularityItem.textContent = songData[i].details.popularity;
+    let titleItem = document.createElement("td");
+    let artistItem = document.createElement("td");
+    let yearItem = document.createElement("td");
+    let genreItem = document.createElement("td");
+    let popularityItem = document.createElement("td");
+    
+    titleItem.textContent = songData[i].title;
+    artistItem.textContent = songData[i].artist.name
+    yearItem.textContent = songData[i].year;
+    genreItem.textContent = songData[i].genre.name;
+    popularityItem.textContent = songData[i].details.popularity;
 
-       titleListNode.append(titleItem)
-       artistListNode.append(artistItem)
-       yearListNode.append(yearItem)
-       genreListNode.append(genreItem)
-       popularityListNode.append(popularityItem)
-   }
+    row.appendChild(titleItem)
+    row.appendChild(artistItem)
+    row.appendChild(yearItem)
+    row.appendChild(genreItem)
+    row.appendChild(popularityItem)
+
+    tBody.appendChild(row)
+}
 
    //add event handler for clearing filter options
    const clearButtonNode = document.querySelector("#clearButton")
@@ -117,15 +119,12 @@ function mainApplication(songData){
        let titleSearchNode = document.querySelector("#titleSearch")
        let titleArtistNode = document.querySelector("#artistSearch")
        let titleGenreNode = document.querySelector("#genreSearch")
-
        if(titleSearchNode.checked){
            titleSearchNode.checked = false;
        }
-
        if(titleArtistNode.checked){
            titleArtistNode.checked = false;
        }
-
        if(titleGenreNode.checked){
            titleGenreNode.checked = false;
        }
@@ -135,6 +134,4 @@ function mainApplication(songData){
 
    // this is where main ends so oyur brain doesnt go boom
 }
-
-
 
