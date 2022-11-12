@@ -1,14 +1,17 @@
 <!DOCTYPE html>
+
 <head>
     <link href="index.css" rel="stylesheet">
     <script src="assign2.js" type="text/JavaScript"></script>
 </head>
 <html>
+
 <body>
     <div id="header">
         <h1>Header</h1>
-        <button id="playlist">Playlist</button>
-        <button id="credit">Credits</button>
+        <button id="playlist_button">Playlist</button>
+        <button id="close_view_button">Close View</button>
+        <button id="credit_button">Credits</button>
 
     </div>
     <div id="song_search">
@@ -19,14 +22,14 @@
             <br>
             <br>
             <br>
-            <input type="radio"  value="artist" id="artist_filter">Artist
+            <input type="radio" value="artist" id="artist_filter">Artist
             <select id="pickArtist">
                 <!-- add options for each artist in js-->
                 <option value="none">Pick one</option>
                 <option value="ye">Kanye West</option>
                 <option value="drake">Drake</option>
                 <option value="savage">21 Savage</option>
-                <option value="baby">Lil Baby</option>  
+                <option value="baby">Lil Baby</option>
             </select>
             <br>
             <br>
@@ -61,48 +64,74 @@
             </table>
         </div>
     </div>
+
+    <!--
     <div id="footer">
           <p>Footer</p>  
     </div>
+    -->
 
-    
-    
-    
-    <div id="song_details">
+
+
+    <!-- need to add class = hidden at some point-->
+    <!-- also need to organize this shit better so easier to work with css-->
+    <!-- also add buttons and other stuff and stop being bum-->
+    <div id="song_details" class="hidden">
         <div id="song_info">
-            <h1>Song Information</h1>
-            <p>For loop song info such as, title, artist, narture, etc.</p>
-            <br>
-            <p>Analysis data:</p>
-            <ul>
-                <li>bpm</li>
-                <li>energy</li>
-                <li>liveness</li>
-                <!--list song data in js-->
+            <h1> Song Information: </h1>
+            <ul id="song_info_text">
+                <li><b>Title:</b> title</li>
+                <li><b>Artist:</b> artist</li>
+                <li><b>Type:</b> type</li>
+                <li><b>Genre:</b> genre</li>
+                <li><b>Year:</b> year</li>
+                <li><b>Duration:</b> 0:00</li>
+            </ul>
+
+            <h2>Analysis Data:</h2>
+            <ul id="analysis_data_text">
+                <!-- need to change values at some point-->
+                <li><b>BPM:</b> 0 </li>
+                <li><b>Energy:</b> 0 </li>
+                <li><b>Danceability:</b> 0 </li>
+                <li><b>Liveness:</b> 0 </li>
+                <li><b>Valence:</b> 0 </li>
+                <li><b>Acousticness:</b> 0 </li>
+                <li><b>Speechiness:</b> 0 </li>
+                <li><b>Popularity:</b> 0 </li>
             </ul>
         </div>
         <div id="radar_chart">
-            <h1>Radar Chart</h1>
+            <!-- need to use chart.js for this-->
+            <p><b>Radar Chart</b></p>
         </div>
     </div>
 
 
-
-
-    <div id="playlist_details">
-        <h1 id="header">Playlist Details</h1>
+    <!-- work on buttons -->
+    <div id="playlist_details" class="hidden">
+        <h1>Playlist Details</h1>
         <p id="playlist_stats"># songs, Popularity ranking</p>
         <button id="clear_playlist">Clear Playlist</button>
-        <table>
-            <tr>
-                <th id="table_title">Title</th>
-                <th id="table_artist">Artist</th>
-                <th id="table_year">Year</th>
-                <th id="table_genre">Genre</th>
-                <th id="table_popular">Popularity</th>
-            </tr>
+        <table id="playlist_table_stats">
+            <thead>
+                <tr>
+                    <th id="playlist_title">Title</th>
+                    <th id="playlist_artist">Artist</th>
+                    <th id="playlist_year">Year</th>
+                    <th id="playlist_genre">Genre</th>
+                    <th id="playlist_popularity">Popularity</th>
+                </tr>
+            </thead>
         </table>
         <button id="remove_playlist">Remove</button>
     </div>
+
+    <footer>
+        <p><b>Copyright &copy; 2022 Wagwan Music </b> </p>
+    </footer>
 </body>
+
 </html>
+
+<!-- testing a thing-->
