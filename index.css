@@ -23,13 +23,19 @@ footer{
     Song search CSS
 */
 
-
+.song_search_hide{
+    display: none;
+}
 
 #song_search{
     width: 400px;
     height: 600px;
     border: 1px solid purple;
     background-color: lightgray;
+}
+
+.playlist_button_hide{
+    display: none;
 }
 
 #playlist_button{
@@ -46,12 +52,26 @@ footer{
     padding: 10px;
 }
 
+.close_view_hide{
+    display: none;
+}
+
 #close_view_button{
     position: absolute;
     margin-left: 575px;
     top: 25px;
     padding: 10px;
+}
+
+.close_view_hide2{
     display: none;
+}
+
+#close_view_button2{
+    position: absolute;
+    margin-left: 575px;
+    top: 25px;
+    padding: 10px;
 }
 
 #filters{
@@ -70,24 +90,6 @@ footer{
     width: 150px;
     padding: 10px;
     text-align: left;
-}
-
-#search{
-    width: 1050px;
-    height: 600px;
-    border: 1px solid blue;
-    position: absolute;
-    left: 450px;
-    top: 80px;
-    text-align: center;
-    background-color: lightgray;
-}
-
-#search h2{
-    font-size: 36px;
-    position: relative;
-    bottom: 20px;
-    text-align: center;
 }
 
 /*
@@ -113,7 +115,7 @@ footer{
 #search_table tbody{
     height: 500px;
     width: 100%;
-    border: 1px solid darkcyan;
+    border: 1px solid blue;
     overflow-y: scroll;
     float: left;
 }
@@ -121,6 +123,31 @@ footer{
 button#apply_filter, button#clear_filter{
     width: 100px;
     padding: 5px;
+}
+
+button#add_to_playlist{
+    position: absolute;
+    width: 100px;
+    padding: 5px;
+    top: 100px;
+    margin-left: 800px;
+}
+
+#search{
+    width: 1050px;
+    height: 600px;
+    border: 1px solid blue;
+    position: absolute;
+    left: 450px;
+    top: 80px;
+    text-align: center;
+    background-color: lightgray;
+}
+#search h2{
+    font-size: 36px;
+    position: relative;
+    bottom: 20px;
+    text-align: center;
 }
 
 #table_title{
@@ -147,15 +174,19 @@ button#apply_filter, button#clear_filter{
 
 /*  
     Song details CSS
-
     In a pretty good state atm, 
     just need to add the radar and the song info + analysis data from API
 */
 
 
-#song_details div{
-    margin-top: 10px;
+
+.song_details_hide{
     display: none;
+}
+
+
+#song_details{
+    margin-top: 10px;
 }
 
 #song_info{
@@ -187,24 +218,34 @@ button#apply_filter, button#clear_filter{
     left: 450px;
     top: 80px;
     text-align: center;
+    margin-top: 10px;
 }
 
 #radar_chart p{
     font-size: 36px;
+    position: relative;
+    top: -10px;
 }
 
-
+#myChart {
+    max-height: 500px;
+    position: relative;
+    top: -25px;
+}
 
 /* 
     Playlist view CSS
 */
 
+.playlist_hide{
+    display: none;
+}
 
 
 #playlist_details{
     border: 1px solid red;
     height: 600px;
-    display: none;
+
 }
 
 #playlist_stats{
