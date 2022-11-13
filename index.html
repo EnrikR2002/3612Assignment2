@@ -3,18 +3,20 @@
 <head>
     <link href="index.css" rel="stylesheet">
     <script src="assign2.js" type="text/JavaScript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <html>
 
 <body>
     <div id="header">
         <h1>Header</h1>
-        <button id="playlist_button">Playlist</button>
-        <button id="close_view_button">Close View</button>
+        <button id="playlist_button" class="playlist_button_hide">Playlist</button>
+        <button id="close_view_button" class="close_view_hide">Close View</button>
+        <button id="close_view_button2" class="close_view_hide2">Close View</button>
         <button id="credit_button">Credits</button>
 
     </div>
-    <div id="song_search">
+    <div id="song_search" class="song_search_hide">
         <h2>Song Search</h2>
         <div id="filters">
             <input type="radio" value="title" id="title_filter">Title
@@ -25,20 +27,14 @@
             <input type="radio" value="artist" id="artist_filter">Artist
             <select id="pickArtist">
                 <!-- add options for each artist in js-->
-                <option value="none">Pick one</option>
-                <option value="ye">Kanye West</option>
-                <option value="drake">Drake</option>
-                <option value="savage">21 Savage</option>
-                <option value="baby">Lil Baby</option>
+                
             </select>
             <br>
             <br>
             <br>
             <input type="radio" value="genre" id="genre_filter">Genre
             <select id="pickGenre">
-                <option value="none">Pick one</option>
-                <option value="hip-hop">hip-hop</option>
-                <option value="r&b">R&B</option>
+                
             </select>
             <br>
             <br>
@@ -62,6 +58,7 @@
                 </tbody>
                 <!--add songs that match filter criteria in js-->
             </table>
+            <button id="add_to_playlist">Add to Playlist</button>
         </div>
     </div>
 
@@ -76,40 +73,40 @@
     <!-- need to add class = hidden at some point-->
     <!-- also need to organize this shit better so easier to work with css-->
     <!-- also add buttons and other stuff and stop being bum-->
-    <div id="song_details" class="hidden">
+    <div id="song_details" class="song_details_hide">
         <div id="song_info">
             <h1> Song Information: </h1>
             <ul id="song_info_text">
-                <li><b>Title:</b> title</li>
-                <li><b>Artist:</b> artist</li>
-                <li><b>Type:</b> type</li>
-                <li><b>Genre:</b> genre</li>
-                <li><b>Year:</b> year</li>
-                <li><b>Duration:</b> 0:00</li>
+                <li id="song_title"></li>
+                <li id="song_artist"></li>
+                <li id="song_genre"></li>
+                <li id="song_year"></li>
+                <li id="song_duration"></li>
             </ul>
 
             <h2>Analysis Data:</h2>
             <ul id="analysis_data_text">
                 <!-- need to change values at some point-->
-                <li><b>BPM:</b> 0 </li>
-                <li><b>Energy:</b> 0 </li>
-                <li><b>Danceability:</b> 0 </li>
-                <li><b>Liveness:</b> 0 </li>
-                <li><b>Valence:</b> 0 </li>
-                <li><b>Acousticness:</b> 0 </li>
-                <li><b>Speechiness:</b> 0 </li>
-                <li><b>Popularity:</b> 0 </li>
+                <li id="bpm"></li>
+                <li id="energy"></li>
+                <li id="dance"></li>
+                <li id="liveness"></li>
+                <li id="valence"></li>
+                <li id="acoustic"></li>
+                <li id="speech"></li>
+                <li id="analysis_pop"></li>
             </ul>
         </div>
         <div id="radar_chart">
             <!-- need to use chart.js for this-->
             <p><b>Radar Chart</b></p>
+            <canvas id="myChart"></canvas>
         </div>
     </div>
 
 
     <!-- work on buttons -->
-    <div id="playlist_details" class="hidden">
+    <div id="playlist_details" class="playlist_hide">
         <h1>Playlist Details</h1>
         <p id="playlist_stats"># songs, Popularity ranking</p>
         <button id="clear_playlist">Clear Playlist</button>
@@ -123,6 +120,9 @@
                     <th id="playlist_popularity">Popularity</th>
                 </tr>
             </thead>
+            <tbody>
+
+            </tbody>
         </table>
         <button id="remove_playlist">Remove</button>
     </div>
@@ -133,5 +133,3 @@
 </body>
 
 </html>
-
-<!-- testing a thing-->
