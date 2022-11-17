@@ -1,15 +1,36 @@
+html {
+    background-color: #52eb34;
+}
+
+html * {
+    font-family: "Candara", sans-serif;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
 #header{
-    width: auto;
+    width: 1592px;
     height: 70px;
     text-align: center;
-    border: 1px solid black;
+    border: 3px solid blue;
     background-color: #bfbfbf;
 }
 
+#header h1 {
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+    bottom: 5px;
+    color: darkgreen;
+    text-shadow: 2px 2px 2px gray;
+}
+
 footer{
-    width: auto;
+    width: 1592px;
     height: 50px;
-    border: 1px solid crimson;
+    border: 3px solid blue;
     text-align: center;
     font-size: 24px;
     margin-top: 10px;
@@ -17,7 +38,11 @@ footer{
     background-color: #bfbfbf;
 }
 
-
+footer p{
+    position: relative;
+    text-shadow: 2px 2px 2px gray;
+    bottom: 10px;
+}
 
 /* 
     Song search CSS
@@ -30,8 +55,14 @@ footer{
 #song_search{
     width: 400px;
     height: 600px;
-    border: 1px solid purple;
+    margin-top: 10px;
+    border: 3px solid blue;
     background-color: lightgray;
+}
+
+#song_search h2{
+    text-align: center;
+    font-size: 36px;
 }
 
 .playlist_button_hide{
@@ -43,6 +74,7 @@ footer{
     margin-left: 600px;
     top: 25px;
     padding: 10px;
+    border: 3px solid blue;
 }
 
 #credit_button{
@@ -50,6 +82,22 @@ footer{
     margin-left: 675px;
     top: 25px;
     padding: 10px;
+    border: 3px solid blue;
+}
+
+#credit_popup{
+    position: absolute;
+    margin-left: 1400px;
+    padding: 0px;
+    top: 65px;
+    z-index: 1;
+    white-space: nowrap;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.credit_popup_hide{
+    display: none;
 }
 
 .close_view_hide{
@@ -61,6 +109,7 @@ footer{
     margin-left: 575px;
     top: 25px;
     padding: 10px;
+    border: 3px solid blue;
 }
 
 .close_view_hide2{
@@ -72,31 +121,14 @@ footer{
     margin-left: 575px;
     top: 25px;
     padding: 10px;
+    border: 3px solid blue;
 }
 
 #filters{
     position: absolute;
-    border: 1px solid red;
-    margin-left: 12px;
+    border: 3px solid blue;
+    margin-left: 100px;
 }
-
-#artist{
-    width: 150px;
-    padding: 10px;
-    text-align: left;
-}
-
-#genre{
-    width: 150px;
-    padding: 10px;
-    text-align: left;
-}
-
-/*
-#search_table tr {
-    display: block;
-}
-*/
 
 #search_table{
     position: absolute;
@@ -115,33 +147,48 @@ footer{
 #search_table tbody{
     height: 500px;
     width: 100%;
-    border: 1px solid blue;
     overflow-y: scroll;
     float: left;
+}
+
+#search_table tbody *{
+    border: 3px solid blue;
 }
 
 button#apply_filter, button#clear_filter{
     width: 100px;
     padding: 5px;
+    border: 3px solid blue;
 }
 
-button#add_to_playlist{
+button#apply_filter {
+    margin-left: 15px;
+}
+
+.hide_add_popup{
+    display: none;
+}
+
+#add_popup{
+    padding: 10px;
     position: absolute;
-    width: 100px;
-    padding: 5px;
-    top: 100px;
-    margin-left: 800px;
+    font-size: 24px;
+    right: 1225px;
+    bottom: 100px;
+    border: 3px solid blue;
+    background-color: lightblue;
 }
 
 #search{
-    width: 1050px;
+    width: 1150px;
     height: 600px;
-    border: 1px solid blue;
+    border: 3px solid blue;
     position: absolute;
     left: 450px;
     top: 80px;
     text-align: center;
     background-color: lightgray;
+    margin-top: 14px;
 }
 #search h2{
     font-size: 36px;
@@ -151,13 +198,13 @@ button#add_to_playlist{
 }
 
 #table_title{
-    padding-left: 300px;
-    padding-right: 260px;
+    padding-left: 305px;
+    padding-right: 270px;
 }
 
 #table_artist{
     padding-left: 100px;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 #table_year{
     padding-left: 50px;
@@ -168,7 +215,7 @@ button#add_to_playlist{
     padding-right: 0px;
 }
 #table_popular{
-    padding-left: 25px;
+    padding-left: 45px;
     padding-right: 20px;
 }
 
@@ -192,7 +239,7 @@ button#add_to_playlist{
 #song_info{
     width: 400px;
     height: 600px;
-    border: 1px solid purple;
+    border: 3px solid blue;
     background-color: lightgray;
 }
 
@@ -207,18 +254,20 @@ button#add_to_playlist{
 
 #analysis_data_text{
     font-size: 24px;
+    position: relative;
+    bottom: 15px;
 }
 
 #radar_chart{
     position: absolute;
     width: 1050px;
     height: 600px;
-    border: 1px solid blue;
+    border: 3px solid blue;
     background-color: lightgray;
     left: 450px;
     top: 80px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #radar_chart p{
@@ -233,6 +282,8 @@ button#add_to_playlist{
     top: -25px;
 }
 
+
+
 /* 
     Playlist view CSS
 */
@@ -243,31 +294,32 @@ button#add_to_playlist{
 
 
 #playlist_details{
-    border: 1px solid red;
+    border: 3px solid blue;
     height: 600px;
-
-}
-
-#playlist_stats{
-    border: 1px solid black;
-    text-align: center;
-    top: 50px;  
+    width: 1592px;
+    margin-top: 10px;
+    background-color: lightgray;
 }
 
 #playlist_details table{
     position: absolute;
     top: 200px;
+}
 
+#playlist_details tbody *{
+    border: 3px solid blue;
 }
 
 #playlist_details h1{
-    text-align: left;
+    text-align: center;
     margin-left: 12px;
 }
 
 #playlist_table_stats{
     font-size: 24px;
     position: absolute;
+    margin-left: 12px;
+    text-align: center;
 }
 
 
@@ -314,5 +366,7 @@ button#add_to_playlist{
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    top: 100px;
+    top: 235px;
+    right: 100px;
+    border: 3px solid blue;  
 }

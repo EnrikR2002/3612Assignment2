@@ -9,23 +9,28 @@
 
 <body>
     <div id="header">
-        <h1>Header</h1>
+        <h1>GrimeWire&#8482</h1>
         <button id="playlist_button" class="playlist_button_hide">Playlist</button>
         <button id="close_view_button" class="close_view_hide">Close View</button>
         <button id="close_view_button2" class="close_view_hide2">Close View</button>
         <button id="credit_button">Credits</button>
-
+        <div id="credit_popup" class="credit_popup_hide">
+            <p>Shayne Prakash</p>
+            <p>Enrik Rushiti</p>
+            <a href="https://github.com/FrikiEnriki/3612Assignment2"> GitHub Repo </a>
+        </div>
     </div>
     <div id="song_search" class="song_search_hide">
         <h2>Song Search</h2>
         <div id="filters">
             <input type="radio" value="title" id="title_filter">Title
-            <input type="text">
+            <input type="text" id ="input_title">
             <br>
             <br>
             <br>
             <input type="radio" value="artist" id="artist_filter">Artist
             <select id="pickArtist">
+                <option value="0">Select Artist</option>
                 <!-- add options for each artist in js-->
                 
             </select>
@@ -34,7 +39,7 @@
             <br>
             <input type="radio" value="genre" id="genre_filter">Genre
             <select id="pickGenre">
-                
+                <option value="0">Select Genre</option>
             </select>
             <br>
             <br>
@@ -57,22 +62,15 @@
 
                 </tbody>
                 <!--add songs that match filter criteria in js-->
+               
             </table>
-            <button id="add_to_playlist">Add to Playlist</button>
+            
+        </div>
+        <div id="add_popup" class="hide_add_popup">
+            <p>Song added!</p>
         </div>
     </div>
 
-    <!--
-    <div id="footer">
-          <p>Footer</p>  
-    </div>
-    -->
-
-
-
-    <!-- need to add class = hidden at some point-->
-    <!-- also need to organize this shit better so easier to work with css-->
-    <!-- also add buttons and other stuff and stop being bum-->
     <div id="song_details" class="song_details_hide">
         <div id="song_info">
             <h1> Song Information: </h1>
@@ -100,15 +98,12 @@
         <div id="radar_chart">
             <!-- need to use chart.js for this-->
             <p><b>Radar Chart</b></p>
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" width: "1050" height: "600"></canvas>
         </div>
     </div>
 
-
-    <!-- work on buttons -->
     <div id="playlist_details" class="playlist_hide">
         <h1>Playlist Details</h1>
-        <p id="playlist_stats"># songs, Popularity ranking</p>
         <button id="clear_playlist">Clear Playlist</button>
         <table id="playlist_table_stats">
             <thead>
@@ -124,7 +119,6 @@
 
             </tbody>
         </table>
-        <button id="remove_playlist">Remove</button>
     </div>
 
     <footer>
