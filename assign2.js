@@ -7,6 +7,7 @@ Bugs and limitations:
 -  Cannot view song details after returning from the playlist page.
 -  Need to clear the playlist before being able to add songs to the playlist.
 -  Filtering songs causes the padding between songs to be compacted.
+-  After clearing the playlist and going to the song view of a song, you can't close the song view and are stuck on it.
 */
 
 var playlist = []
